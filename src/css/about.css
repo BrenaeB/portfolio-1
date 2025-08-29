@@ -1,0 +1,42 @@
+
+
+.about-photo {
+  width: 120px;      /* smaller size; adjust as needed */
+  height: 120px;     /* keep square to stay circular */
+  object-fit: cover; /* ensure the image fills the frame nicely */
+  border-radius: 50%;  /* ensures circular shape */
+  border: 2px solid #ddd; /* optional subtle border */
+  margin: 0.75rem 0 1.25rem;
+}
+
+
+.about-page {
+	background: #8670c8ae;
+	padding: 6rem;
+	border-radius: 12px;
+	max-width: 600px;
+	margin: 2rem auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.about-title {
+	color: #2d3748;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+
+/* about.css */
+.about-page__title {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.about-description {
+	color: #4a5568;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	text-align: center;
+}
+

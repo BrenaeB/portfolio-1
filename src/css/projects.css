@@ -1,0 +1,129 @@
+/* Shared color tokens (adjust to your palette) */
+:root {
+  --bg-page: #ffffff;            /* This is the base page color; we’ll override to match the colored container below */
+  --card-bg: #ffffff;            /* Default, will be overridden by the main colored container color if you set it there */
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #3b82f6;
+  --card-border: #e5e7eb;
+  --link-bg: var(--primary);
+  --link-bg-hover: #2563eb;
+}
+
+/* Maintain the original colored container look for .projects-page */
+/* If your original .projects-page had a specific color, force it here for the thumbs as well */
+.projects-page {
+  padding: 2rem 1rem;
+  background: var(--card-bg);       /* ensure this matches your colored container color */
+  border-bottom: 1px solid var(--card-border);
+  /* If your original color was a named color, replace --card-bg with that color, e.g.:
+     background: #f6f0ff; or background: #f5f5f5;
+  */
+}
+
+section.projects-page {
+background: #6488dd;
+	padding: 2rem;
+	border-radius: 12px;
+	max-width: 600px;
+	margin: 2rem auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.projects-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.projects-description {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+/* New three-thumbs container beneath the main content */
+.projects-thumbs {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  padding: 0 1rem;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  background: var(--card-bg); /* ensure thumbs visually match the colored container */
+}
+
+/* Each thumb card uses flex in column direction */
+.thumb-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 150px;
+  width: 100%;
+  max-width: 360px;           /* keeps cards compact and visually aligned */
+  display: flex;
+  flex-direction: column;     /* enables flexible content area */
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thumb-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.thumb-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.thumb-card__title {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.thumb-card__desc {
+  color: var(--muted);
+  margin: 0;
+  flex-grow: 1; /* allow description to take available space if needed */
+}
+
+.thumb-card__link {
+  align-self: start;
+  text-decoration: none;
+  color: #fff;
+  background: var(--link-bg);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  margin-top: 0.5rem;
+}
+.thumb-card__link:hover {
+  background: var(--link-bg-hover);
+}
+
+/* Responsive adjustments: three columns on wide screens, stack on small */
+@media (min-width: 1025px) {
+  .projects-thumbs {
+    justify-content: space-between;
+  }
+  .thumb-card {
+    width: calc(33.333% - 0.8333rem); /* 3 cards per row with gap */
+  }
+}
+
+@media (max-width: 1024px) {
+  .thumb-card {
+    width: calc(50% - 0.625rem); /* 2 per row on medium screens */
+  }
+}
+@media (max-width: 640px) {
+  .thumb-card {
+    width: 100%; /* stack on small screens */
+  }
+}

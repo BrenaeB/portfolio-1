@@ -1,0 +1,51 @@
+/* Custom styles for Home page */
+.home {
+	background: #e3fcec;
+	padding: 2rem;
+	border-radius: 12px;
+	max-width: 600px;
+	margin: 2rem auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.home h1 {
+	color: #22543d;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.home p {
+	color: #276749;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	text-align: center;
+}
+
+.skills {
+	background: #f0f4f8;
+	padding: 1.5rem;
+	border-radius: 12px;
+	max-width: 600px;
+	margin: 2rem auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.skills h2 {
+	color: #22543d;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.skills ul {
+	list-style: none;
+	padding: 0;
+}
+
+.skills li {
+	color: #276749;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	text-align: center;
+}

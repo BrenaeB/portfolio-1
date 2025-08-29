@@ -1,0 +1,91 @@
+/* Custom styles for Contact page */
+.contact-page {
+	background: #bee3f8;
+	padding: 2rem;
+	border-radius: 12px;
+	max-width: 600px;
+	margin: 2rem auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.contact-title {
+	color: #2b6cb0;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.contact-description {
+	color: #2c5282;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	text-align: center;
+}
+
+
+/* Existing inline button links (optional) */
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center; /* center the buttons; switch to flex-start for left alignment if needed */
+}
+
+.contact-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  background-color: #1a73e8;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.contact-link-btn:hover,
+.contact-link-btn:focus-visible {
+  background-color: #1669d9;
+  outline: 2px solid rgba(26,115,232,0.6);
+  outline-offset: 2px;
+  transform: translateY(-1px);
+}
+.contact-link-btn:active {
+  transform: translateY(0);
+  background-color: #0f5ccf;
+}
+
+/* New, smaller containers under the main contact page */
+.social-mini-container {
+  display: flex;
+  justify-content: center; /* center the mini cards; change to flex-start if needed */
+  padding: 0.75rem 0;
+}
+
+.mini-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  background-color: #1a73e8; /* matches the main button color; adjust as needed */
+  border: 1px solid rgba(0,0,0,0.1);
+  min-width: 120px; /* keeps a compact card-like feel */
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.mini-link-btn:hover,
+.mini-link-btn:focus-visible {
+  background-color: #1669d9;
+  outline: 2px solid rgba(26,115,232,0.6);
+  outline-offset: 2px;
+  transform: translateY(-1px);
+}
+.mini-link-btn:active {
+  transform: translateY(0);
+  background-color: #0f5ccf;
+}
