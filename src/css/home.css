@@ -1,51 +1,106 @@
-/* Custom styles for Home page */
-.home {
-	background: #e3fcec;
-	padding: 2rem;
-	border-radius: 12px;
-	max-width: 600px;
-	margin: 2rem auto;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+body {
+background: #ff8e53;
+min-height: 100vh;
+margin: 0;
+padding: 0; /* Removed padding */
+font-family: 'Spicy Rice', cursive;
+position: relative;
 }
-
-.home h1 {
-	color: #22543d;
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-	text-align: center;
+/* Navigation Styles */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+z-index: 100;
+padding: 1rem;
 }
-
-.home p {
-	color: #276749;
-	font-size: 1.2rem;
-	line-height: 1.7;
-	text-align: center;
+nav ul {
+display: flex;
+justify-content: center;
+list-style: none;
+padding: 0;
+margin: 0;
+gap: 2rem;
 }
-
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 1.1rem;
+transition: color 0.3s ease;
+}
+nav ul li a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+/* Home Section */
+#home {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 2rem;
+color: white;
+}
+#home h1 {
+font-size: 4rem;
+margin-bottom: 1rem;
+}
+#home p {
+max-width: 600px;
+font-size: 1.25rem;
+line-height: 1.6;
+}
+/* Sections General Styling */
+section {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 4rem 2rem;
+}
+/* Skills Section */
 .skills {
-	background: #f0f4f8;
-	padding: 1.5rem;
-	border-radius: 12px;
-	max-width: 600px;
-	margin: 2rem auto;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+border-radius: 32px;
+padding: 2.5rem;
+max-width: 900px;
+width: 100%;
 }
-
-.skills h2 {
-	color: #22543d;
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	text-align: center;
-}
-
 .skills ul {
-	list-style: none;
-	padding: 0;
+list-style: none;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1rem;
 }
-
 .skills li {
-	color: #276749;
-	font-size: 1.1rem;
-	line-height: 1.7;
-	text-align: center;
+color: #ffffff;
+font-size: 1.1rem;
+font-weight: 600;
+text-align: center;
+padding: 1.25rem 1.5rem;
+background: linear-gradient(135deg, #ff6b9d, #ff8e53);
+border-radius: 20px;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Other existing styles can remain the same */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+#home h1 {
+font-size: 2.5rem;
+}
+#home p {
+font-size: 1.1rem;
+}
+nav ul {
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
 }
