@@ -115,10 +115,101 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact">
-        <h2>Contact Me</h2>
-        {/* Add contact form or contact information */}
-      </section>
+<section id="contact" className="contact-section">
+  <h1 className="contact-title">Contact Me</h1>
+  <div className="contact-container">
+    <p className="contact-description">
+      Ready to bring your ideas to life? Let's connect and discuss how we can work together to create something amazing.
+    </p>
+    
+    <div className="contact-content">
+      <div className="contact-info">
+        <div className="contact-item">
+          <div className="contact-icon">📧</div>
+          <div className="contact-details">
+            <h3>Email</h3>
+            <a href="mailto:brenae.brooks@example.com" className="contact-link">
+              brenae.brooks@example.com
+            </a>
+          </div>
+        </div>
+        
+        <div className="contact-item">
+          <div className="contact-icon">💼</div>
+          <div className="contact-details">
+            <h3>LinkedIn</h3>
+            <a 
+              href="https://www.linkedin.com/in/brenae-b-9b7652294" 
+              className="contact-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/brenae-b-9b7652294
+            </a>
+          </div>
+        </div>
+        
+        <div className="contact-item">
+          <div className="contact-icon">🐙</div>
+          <div className="contact-details">
+            <h3>GitHub</h3>
+            <a 
+              href="https://github.com/BrenaeB" 
+              className="contact-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              github.com/BrenaeB
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <form className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            placeholder="Your name"
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="your.email@example.com"
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required 
+            placeholder="Tell me about your project..."
+          ></textarea>
+        </div>
+        
+        <button type="submit" className="submit-btn">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M1.5 1.5H14.5V14.5H13.5V3.20711L1.5 15.2071L0.792893 14.5L12.7929 2.5H1.5V1.5Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
